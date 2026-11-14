@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner | Olive Nnaji</title>
+  <meta name="description" content="An interactive planner for managing academic tasks and deadlines.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">Olive<span>.</span>Nnaji</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="planner.html" class="active" aria-current="page">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch colour theme">☾</button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container page-header-grid">
+        <div>
+          <p class="eyebrow">Academic Planner</p>
+          <h1>Plan the semester, one task at a time.</h1>
+          <p class="lead">Add assignments and deadlines, mark them complete as you go, and track your progress. Tasks are saved in your browser.</p>
+        </div>
+        <!-- Photo carousel: main.js shows the next photo every 5 seconds -->
+        <div class="carousel">
+          <img class="active" src="images/photos/professional.jpg" alt="Professional portrait of Olive">
+          <img src="images/photos/developer.jpg" alt="Olive in a blue hoodie and headphones">
+          <img src="images/photos/matric-sitting.jpg" alt="Olive seated at the Miva Open University matriculation">
+          <img src="images/photos/welcome-smile.jpg" alt="Olive smiling in headphones and glasses">
+          <img src="images/photos/dinner-gown.jpg" alt="Olive in a red dress, seated on a chair">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container planner">
+
+        <!-- Add task form -->
+        <aside class="card planner-form">
+          <h2>New task</h2>
+          <form id="task-form" novalidate>
+            <div class="form-group">
+              <label for="task-title">Task</label>
+              <input type="text" id="task-title" placeholder="e.g. Submit CSC 106 term project" maxlength="100" autocomplete="off">
+              <p class="error-message" id="task-error"></p>
+            </div>
+            <div class="form-group">
+              <label for="task-course">Course</label>
+              <select id="task-course">
+                <option value="General">General</option>
+                <option value="GST 122">GST 122</option>
+                <option value="MTH 102">MTH 102</option>
+                <option value="PHY 102">PHY 102</option>
+                <option value="PHY 108">PHY 108</option>
+                <option value="COS 102">COS 102</option>
+                <option value="MIVA-CSC 106">MIVA-CSC 106</option>
+                <option value="GST 112">GST 112</option>
+                <option value="MIVA-COS 111">MIVA-COS 111</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="task-date">Due date <span class="optional">(optional)</span></label>
+                <input type="date" id="task-date">
+              </div>
+              <div class="form-group">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority">
+                  <option value="high">High</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add task</button>
+          </form>
+        </aside>
+
+        <!-- Task list -->
+        <div>
+          <div class="stats-grid three">
+            <div class="stat-card"><span>Total</span><strong id="stat-total">0</strong></div>
+            <div class="stat-card"><span>Pending</span><strong id="stat-pending">0</strong></div>
+            <div class="stat-card"><span>Completed</span><strong id="stat-done">0</strong></div>
+          </div>
+
+          <div class="progress-row">
+            <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+            <span id="progress-text">0% complete</span>
+          </div>
+
+          <div class="list-toolbar">
+            <div class="tabs" role="group" aria-label="Filter tasks">
+              <button class="filter-btn active" type="button" data-filter="all">All</button>
+              <button class="filter-btn" type="button" data-filter="pending">Pending</button>
+              <button class="filter-btn" type="button" data-filter="completed">Completed</button>
+            </div>
+            <button class="link-btn" type="button" id="clear-completed">Clear completed</button>
+          </div>
+
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <p class="empty-state" id="empty-state" hidden><strong>No tasks to show</strong>Add a task using the form to get started.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Olive Ngozika Nnaji · B.Sc. Software Engineering, Miva Open University</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Olivennaji99" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/olive-nnaji-843ba0331" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:olivennaji99@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

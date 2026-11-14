@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Olive Nnaji</title>
+  <meta name="description" content="Web projects built by Olive Ngozika Nnaji with HTML, CSS and JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">Olive<span>.</span>Nnaji</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch colour theme">☾</button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container page-header-grid">
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h1>Things I've built while learning.</h1>
+          <p class="lead">Each project was built with HTML, CSS and JavaScript. Click any screenshot to open the live project in a new tab.</p>
+        </div>
+        <!-- Photo carousel: main.js shows the next photo every 5 seconds -->
+        <div class="carousel">
+          <img class="active" src="images/photos/developer.jpg" alt="Olive in a blue hoodie and headphones">
+          <img src="images/photos/professional.jpg" alt="Professional portrait of Olive">
+          <img src="images/photos/welcome-smile.jpg" alt="Olive smiling in headphones and glasses">
+          <img src="images/photos/matric-sitting.jpg" alt="Olive seated at the Miva Open University matriculation">
+          <img src="images/photos/dinner-gown.jpg" alt="Olive in a red dress, seated on a chair">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+
+        <!-- Project 1: Calculator -->
+        <article class="project-card reveal">
+          <a class="project-thumb" href="https://olivennaji99.github.io/calculator2/" target="_blank" rel="noopener" aria-label="Open the live Calculator in a new tab">
+            <img src="images/projects/calculator.png" alt="Screenshot of the Calculator project" width="800" height="500" loading="lazy">
+            <span class="thumb-overlay">Open live project ↗</span>
+          </a>
+          <div class="project-body">
+            <h3>Calculator</h3>
+            <p>A browser calculator that performs basic arithmetic. Users click buttons to build an expression, and JavaScript shows the input and result on screen.</p>
+            <ul class="chip-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Events</li></ul>
+            <div class="project-links">
+              <a href="https://olivennaji99.github.io/calculator2/" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/Olivennaji99/calculator2" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Digital clock -->
+        <article class="project-card reveal">
+          <a class="project-thumb" href="https://olivennaji99.github.io/digitalClock/" target="_blank" rel="noopener" aria-label="Open the live Digital Clock in a new tab">
+            <img src="images/projects/digital-clock.png" alt="Screenshot of the Digital Clock project" width="800" height="500" loading="lazy">
+            <span class="thumb-overlay">Open live project ↗</span>
+          </a>
+          <div class="project-body">
+            <h3>Digital Clock</h3>
+            <p>A live digital clock that reads the current time with the JavaScript Date object and updates the display every second using setInterval.</p>
+            <ul class="chip-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Date API</li></ul>
+            <div class="project-links">
+              <a href="https://olivennaji99.github.io/digitalClock/" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/Olivennaji99/digitalClock" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Analogue clock -->
+        <article class="project-card reveal">
+          <a class="project-thumb" href="https://olivennaji99.github.io/Analog-clock/" target="_blank" rel="noopener" aria-label="Open the live Analogue Clock in a new tab">
+            <img src="images/projects/analog-clock.png" alt="Screenshot of the Analogue Clock project" width="800" height="500" loading="lazy">
+            <span class="thumb-overlay">Open live project ↗</span>
+          </a>
+          <div class="project-body">
+            <h3>Analogue Clock</h3>
+            <p>A real-time analogue clock where JavaScript calculates the angle of the hour, minute and second hands and rotates them with CSS transforms.</p>
+            <ul class="chip-list"><li>HTML</li><li>CSS Transforms</li><li>JavaScript</li></ul>
+            <div class="project-links">
+              <a href="https://olivennaji99.github.io/Analog-clock/" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/Olivennaji99/Analog-clock" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Musical notes -->
+        <article class="project-card reveal">
+          <a class="project-thumb" href="https://olivennaji99.github.io/musicalNote/" target="_blank" rel="noopener" aria-label="Open the live Musical Notes project in a new tab">
+            <img src="images/projects/musical-note.png" alt="Screenshot of the Musical Notes project showing Do Re Mi buttons" width="800" height="500" loading="lazy">
+            <span class="thumb-overlay">Open live project ↗</span>
+          </a>
+          <div class="project-body">
+            <h3>Musical Notes</h3>
+            <p>An interactive solfège keyboard with eight buttons, from Do to the high Do. Each button plays its musical note when clicked.</p>
+            <ul class="chip-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Audio</li></ul>
+            <div class="project-links">
+              <a href="https://olivennaji99.github.io/musicalNote/" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/Olivennaji99/musicalNote" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Olive Ngozika Nnaji · B.Sc. Software Engineering, Miva Open University</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Olivennaji99" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/olive-nnaji-843ba0331" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:olivennaji99@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

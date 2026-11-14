@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Olive Nnaji</title>
+  <meta name="description" content="Education, career aspirations, skills and interests of Olive Ngozika Nnaji.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">Olive<span>.</span>Nnaji</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch colour theme">☾</button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container page-header-grid">
+        <div>
+          <p class="eyebrow">About me</p>
+          <h1>Student first, builder always.</h1>
+          <p class="lead">My education, where I'm heading, the skills I'm building and what I enjoy outside the classroom.</p>
+        </div>
+        <!-- Photo carousel: main.js shows the next photo every 5 seconds -->
+        <div class="carousel">
+          <img class="active" src="images/photos/welcome-smile.jpg" alt="Olive smiling in headphones and glasses">
+          <img src="images/photos/matric-sitting.jpg" alt="Olive seated at the Miva Open University matriculation">
+          <img src="images/photos/developer.jpg" alt="Olive in a blue hoodie and headphones">
+          <img src="images/photos/professional.jpg" alt="Professional portrait of Olive">
+          <img src="images/photos/dinner-gown.jpg" alt="Olive in a red dress, seated on a chair">
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational background -->
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2>Educational background</h2>
+        </div>
+        <ol class="timeline reveal">
+          <li>
+            <p class="timeline-date">In progress · 100 Level, 2nd Semester</p>
+            <h3>B.Sc. Software Engineering</h3>
+            <p class="org">Miva Open University · School of Computing</p>
+            <p>
+              First semester completed, covering computing sciences, statistics, mathematics,
+              physics and communication. Currently studying web technologies, problem-solving,
+              calculus and physics.
+            </p>
+          </li>
+          <li>
+            <!-- REPLACE: your secondary school name and years -->
+            <p class="timeline-date">[Start year] — [End year]</p>
+            <h3>Senior Secondary School Certificate (WAEC)</h3>
+            <p class="org">[Your secondary school name]</p>
+            <p>Science subjects, including Mathematics, Physics and English Language.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Practical experience (kept secondary to academics) -->
+    <section class="section section-alt">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Alongside my studies</p>
+          <h2>Practical experience</h2>
+        </div>
+        <ol class="timeline reveal">
+          <li>
+            <p class="timeline-date">August 2025 — Present</p>
+            <h3>Full-Stack Web Developer (Intern)</h3>
+            <p class="org">Verbum Networks Limited</p>
+            <p>
+              Contributing to a multi-vendor e-commerce platform with separate admin and seller
+              roles. This internship lets me apply concepts from my coursework in a real team setting.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Career aspirations -->
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Direction</p>
+          <h2>Career aspirations</h2>
+        </div>
+        <div class="reveal">
+          <p>
+            My goal is to become a <strong>software engineer</strong> who designs reliable,
+            accessible software that solves real problems for people in Nigeria and beyond.
+          </p>
+          <ol class="goals">
+            <li><div><h3>Short term</h3><p>Graduate each level with strong results and master the fundamentals of programming and web development.</p></div></li>
+            <li><div><h3>Medium term</h3><p>Deepen my knowledge of software design, data structures and testing, and complete my SIWES placements.</p></div></li>
+            <li><div><h3>Long term</h3><p>Work as a software engineer on impactful products and mentor upcoming students in tech.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical skills -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>Technical skills</h2>
+          <p class="intro">Skills from my coursework, with tools from my internship listed separately.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal">
+            <h3>Web fundamentals</h3>
+            <p>From Introduction to Web Technologies</p>
+            <ul class="chip-list">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Flexbox &amp; Grid</li><li>Responsive design</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Problem solving &amp; tools</h3>
+            <p>From Introduction to Problem-Solving</p>
+            <ul class="chip-list">
+              <li>Algorithms</li><li>Flowcharts</li><li>Pseudocode</li><li>Git &amp; GitHub</li><li>VS Code</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Also experienced with</h3>
+            <p>Through my internship</p>
+            <ul class="chip-list">
+              <li>React</li><li>Next.js</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>TypeScript</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies and multimedia -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Beyond the classroom</p>
+          <h2>Hobbies &amp; interests</h2>
+        </div>
+        <div class="grid-2">
+          <!-- REPLACE: adjust these to your real hobbies -->
+          <ul class="interest-list reveal">
+            <li><span class="interest-icon" aria-hidden="true">🎵</span><div><strong>Music</strong><span class="desc">Listening, and even coding small music projects</span></div></li>
+            <li><span class="interest-icon" aria-hidden="true">📚</span><div><strong>Reading</strong><span class="desc">Tech articles, documentation and good books</span></div></li>
+            <li><span class="interest-icon" aria-hidden="true">🎨</span><div><strong>Design</strong><span class="desc">Sketching layouts and exploring colour</span></div></li>
+            <li><span class="interest-icon" aria-hidden="true">🚀</span><div><strong>Learning new tech</strong><span class="desc">Trying new tools and building small experiments</span></div></li>
+          </ul>
+
+          <figure class="media reveal">
+            <video controls preload="metadata">
+              <source src="media/growth.mp4" type="video/mp4">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+              Your browser does not support the HTML5 video element.
+            </video>
+            <figcaption>Growth happens one step at a time, just like learning.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Olive Ngozika Nnaji · B.Sc. Software Engineering, Miva Open University</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Olivennaji99" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/olive-nnaji-843ba0331" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:olivennaji99@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olive Nnaji | Software Engineering Student</title>
+  <meta name="description" content="Academic portfolio of Olive Ngozika Nnaji, a Software Engineering student at Miva Open University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Site header and navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">Olive<span>.</span>Nnaji</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch colour theme">☾</button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: name, photograph and welcome message -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="greeting" id="greeting">Welcome to my portfolio</p>
+          <h1>Hi, I'm <span class="highlight">Olive Nnaji</span></h1>
+          <p class="hero-role">Software Engineering Student · Miva Open University</p>
+          <p class="hero-intro">
+            Welcome! This website brings together my academic journey, the projects I have
+            built while learning, and the tools I use to manage my studies.
+          </p>
+          <div class="hero-buttons">
+            <a href="academics.html" class="btn btn-primary">View my academics</a>
+            <a href="projects.html" class="btn btn-outline">See my projects</a>
+          </div>
+        </div>
+
+        <figure class="hero-photo">
+          <img src="images/olive-hero.png" alt="Portrait of Olive Ngozika Nnaji" width="460" height="560">
+          <span class="float-chip chip-1">HTML5</span>
+          <span class="float-chip chip-2">CSS3</span>
+          <span class="float-chip chip-3">JavaScript</span>
+          <figcaption class="photo-badge"><strong>100 Level</strong>B.Sc. Software Engineering</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Brief biography -->
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Biography</p>
+          <h2>A little about me</h2>
+        </div>
+        <div class="reveal">
+          <div class="prose">
+            <p>
+              I'm <strong>Olive Ngozika Nnaji (Ngozi)</strong>, a 100 Level Software Engineering
+              student in the School of Computing at Miva Open University. I enjoy understanding
+              how software works and turning ideas into simple, useful tools.
+            </p>
+            <p>
+              Courses such as Introduction to Web Technologies and Introduction to Problem-Solving
+              have strengthened my foundation in HTML, CSS, JavaScript and logical thinking.
+              Alongside my degree, I gain practical experience as a web development intern,
+              which helps me apply what I learn in class to real projects.
+            </p>
+          </div>
+          <dl class="facts">
+            <div><dt>Programme</dt><dd>B.Sc. Software Engineering</dd></div>
+            <div><dt>School</dt><dd>School of Computing</dd></div>
+            <div><dt>Current level</dt><dd>100 Level, 2nd Semester</dd></div>
+            <div><dt>Institution</dt><dd>Miva Open University</dd></div>
+          </dl>
+          <a href="about.html" class="text-link">Read more about me →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick links into the site -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Explore</p>
+          <h2>What you'll find here</h2>
+        </div>
+        <div class="grid-3">
+          <a href="projects.html" class="card card-link reveal">
+            <div class="card-icon" aria-hidden="true">💻</div>
+            <h3>Projects</h3>
+            <p>Web projects I have built with HTML, CSS and JavaScript, with live demos.</p>
+          </a>
+          <a href="academics.html" class="card card-link reveal">
+            <div class="card-icon" aria-hidden="true">🎓</div>
+            <h3>Academic Hub</h3>
+            <p>My courses, weekly study timetable and a GPA calculator.</p>
+          </a>
+          <a href="planner.html" class="card card-link reveal">
+            <div class="card-icon" aria-hidden="true">✅</div>
+            <h3>Academic Planner</h3>
+            <p>An interactive planner for tracking assignments and deadlines.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <h2>Let's connect</h2>
+            <p>Open to study groups, academic collaborations and internship opportunities.</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Contact me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Olive Ngozika Nnaji · B.Sc. Software Engineering, Miva Open University</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Olivennaji99" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/olive-nnaji-843ba0331" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:olivennaji99@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
