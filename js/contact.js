@@ -12,6 +12,7 @@ const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
 const messageInput = document.getElementById("message");
 const successBox = document.getElementById("form-success");
+const submitBtn = contactForm.querySelector("button[type='submit']");
 
 /* ---------- Helper functions ---------- */
 function showError(input, message) {
@@ -97,7 +98,14 @@ contactForm.addEventListener("submit", function (event) {
     const firstName = nameInput.value.trim().split(" ")[0];
     successBox.textContent = "Thank you, " + firstName + "! Your message has been received.";
     successBox.classList.add("show");
+    successBox.scrollIntoView({ behavior: "smooth", block: "center" }); // bring the message into view
     contactForm.reset();
+
+    // Change the button text to "Received ✓", then back after 3 seconds
+    submitBtn.textContent = "Received ✓";
+    setTimeout(function () {
+      submitBtn.textContent = "Send message";
+    }, 3000);
   }
 });
 

@@ -21,8 +21,8 @@ function applyTheme(theme) {
   themeBtn.textContent = theme === "dark" ? "☀" : "☾";
 }
 
-// Load the saved theme, or use light mode by default
-const savedTheme = localStorage.getItem("theme") || "light";
+// Load the saved theme, or use dark mode by default
+const savedTheme = localStorage.getItem("theme") || "dark";
 applyTheme(savedTheme);
 
 themeBtn.addEventListener("click", function () {
