@@ -10,16 +10,16 @@ Built with plain **HTML, CSS and JavaScript**. No frameworks or libraries.
 |---|---|---|
 | Home | index.html | Name, photo, time-based welcome, biography |
 | About | about.html | Education, experience, aspirations, skills, hobbies, video |
-| Projects | projects.html | 4 projects with screenshots, live links and source code |
-| Academic Hub | academics.html | Dashboard, course tables, study timetable, GPA calculator |
+| Projects | projects.html | 4 HTML/CSS/JavaScript projects (two with live clock previews) plus my professional portfolio |
+| Academic Hub | academics.html | Dashboard, course tables, study timetable, GPA calculator, growth video |
 | Planner | planner.html | Add, complete, delete and filter tasks (saved in localStorage) |
 | Contact | contact.html | Form with JavaScript validation |
 
 ## Requirements covered
 - **HTML:** semantic elements, forms, tables, images, hyperlinks, lists, video
 - **CSS:** external stylesheet, CSS variables, Flexbox and Grid, responsive media queries, styled navigation, transitions and keyframe animations, light/dark theme
-- **JavaScript:** event handling, DOM manipulation, form validation, dynamic updates, arrays and functions, task manager
+- **JavaScript:** event handling, DOM manipulation, form validation, dynamic updates, arrays and functions, task manager, photo carousel (setInterval)
 
 ## Links
-- Live site: https://olivennaji99.github.io/REPO-NAME/
-- Repository: https://github.com/Olivennaji99/REPO-NAME
+- Live site: https://olivennaji99.github.io/OliveNnaji-Student-Portfolio-et-Academic-Management-Website/
+- Repository: https://github.com/Olivennaji99/OliveNnaji-Student-Portfolio-et-Academic-Management-Website

@@ -302,6 +302,15 @@ button, input, select, textarea { font: inherit; }
   opacity: 0; transition: opacity var(--transition);
 }
 .project-thumb:hover img, .project-thumb:focus-visible img { transform: scale(1.06); }
+
+/* Live project preview (iframe). It is drawn twice as big, then shrunk to half,
+   so the project shows its full desktop layout inside the small card.
+   pointer-events: none lets clicks pass through to the link around it. */
+.live-preview {
+  width: 200%; height: 200%; border: 0;
+  transform: scale(0.5); transform-origin: top left;
+  pointer-events: none;
+}
 .project-thumb:hover .thumb-overlay, .project-thumb:focus-visible .thumb-overlay { opacity: 1; }
 .project-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 24px; }
 .project-body p { color: var(--muted); }
