@@ -3,7 +3,7 @@
 COS 106 – Introduction to Web Technologies, Term Project
 Olive Ngozika Nnaji · B.Sc. Software Engineering · Miva Open University
 
-Built with plain **HTML, CSS and JavaScript**. No frameworks or libraries.
+Built with plain **HTML, CSS and JavaScript**. No frameworks. The only outside library is EmailJS, used by the contact form.
 
 ## Pages
 | Page | File | Key features |
@@ -13,7 +13,7 @@ Built with plain **HTML, CSS and JavaScript**. No frameworks or libraries.
 | Projects | projects.html | 4 HTML/CSS/JavaScript projects (two with live clock previews) plus my professional portfolio |
 | Academic Hub | academics.html | Dashboard, course tables, study timetable, GPA calculator, growth video |
 | Planner | planner.html | Add, complete, delete and filter tasks (saved in localStorage) |
-| Contact | contact.html | Form with JavaScript validation |
+| Contact | contact.html | Form with JavaScript validation; messages are emailed to me and the visitor gets an automatic reply via EmailJS |
 
 ## Requirements covered
 - **HTML:** semantic elements, forms, tables, images, hyperlinks, lists, video
