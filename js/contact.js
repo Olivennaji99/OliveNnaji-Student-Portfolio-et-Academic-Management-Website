@@ -1,10 +1,19 @@
 /* ==========================================================
-   contact.js — contact form validation
+   contact.js — contact form validation and sending
    Checks that:
    - no field is empty
    - the email format is valid
    - the phone number contains only digits
+   Then sends the message with EmailJS:
+   - one email to me with the visitor's message
+   - one automatic reply to the visitor
    ========================================================== */
+
+// EmailJS details (from my EmailJS account)
+const SERVICE_ID = "service_xfdim1q";
+const TEMPLATE_TO_ME = "template_fdem343";
+const TEMPLATE_AUTO_REPLY = "template_dosdeyp";
+emailjs.init({ publicKey: "znvEH6ZCC5syyVBLo" });
 
 const contactForm = document.getElementById("contact-form");
 const nameInput = document.getElementById("name");
@@ -92,21 +101,51 @@ function validateForm() {
 /* ---------- Events ---------- */
 contactForm.addEventListener("submit", function (event) {
   event.preventDefault(); // stop the page from reloading
-  successBox.classList.remove("show");
+  successBox.classList.remove("show", "failed");
 
-  if (validateForm()) {
-    const firstName = nameInput.value.trim().split(" ")[0];
-    successBox.textContent = "Thank you, " + firstName + "! Your message has been received.";
-    successBox.classList.add("show");
-    successBox.scrollIntoView({ behavior: "smooth", block: "center" }); // bring the message into view
-    contactForm.reset();
-
-    // Change the button text to "Received ✓", then back after 3 seconds
-    submitBtn.textContent = "Received ✓";
-    setTimeout(function () {
-      submitBtn.textContent = "Send message";
-    }, 3000);
+  if (!validateForm()) {
+    return; // stop here if any field is wrong
   }
+
+  // The names here match {{name}}, {{email}}, {{phone}} and {{message}} in my EmailJS templates
+  const formData = {
+    name: nameInput.value.trim(),
+    email: emailInput.value.trim(),
+    phone: phoneInput.value.trim(),
+    message: messageInput.value.trim()
+  };
+  const firstName = formData.name.split(" ")[0];
+
+  // Show that the message is being sent, and stop double clicks
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  // 1. Send the visitor's message to me
+  emailjs.send(SERVICE_ID, TEMPLATE_TO_ME, formData)
+    .then(function () {
+      // 2. Send the automatic reply to the visitor
+      emailjs.send(SERVICE_ID, TEMPLATE_AUTO_REPLY, formData);
+
+      successBox.textContent = "Thank you, " + firstName + "! Your message has been received. Check your email for my reply.";
+      successBox.classList.add("show");
+      contactForm.reset();
+
+      // Change the button text to "Received ✓", then back after 3 seconds
+      submitBtn.textContent = "Received ✓";
+      setTimeout(function () {
+        submitBtn.textContent = "Send message";
+      }, 3000);
+    })
+    .catch(function () {
+      // Sending failed, for example no internet connection
+      successBox.textContent = "Sorry, your message could not be sent. Please try again or email me directly.";
+      successBox.classList.add("show", "failed");
+      submitBtn.textContent = "Send message";
+    })
+    .finally(function () {
+      submitBtn.disabled = false;
+      successBox.scrollIntoView({ behavior: "smooth", block: "center" }); // bring the message into view
+    });
 });
 
 // Remove a field's error as soon as the user starts typing
