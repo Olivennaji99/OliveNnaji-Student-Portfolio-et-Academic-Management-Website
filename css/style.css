@@ -391,8 +391,9 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 textarea { min-height: 140px; resize: vertical; }
 input.invalid, textarea.invalid { border-color: var(--danger); }
-.error-message { color: var(--danger); font-size: 0.85rem; margin-top: 4px; min-height: 1.2em; }
-.form-success {
+/* ".card" is added so these beat the grey ".card p" rule and keep their red and green colours */
+.error-message, .card .error-message { color: var(--danger); font-size: 0.85rem; margin-top: 4px; min-height: 1.2em; }
+.form-success, .card .form-success {
   display: none; margin-bottom: 20px; padding: 14px 16px; border-radius: 10px;
   background: rgba(21, 128, 61, 0.12); color: var(--success); font-weight: 500;
 }
